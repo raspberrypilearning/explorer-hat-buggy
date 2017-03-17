@@ -112,7 +112,9 @@ You probably don't want your buggy to be tethered to a keyboard, mouse, monitor 
 
 ## Adding a GUI
 
-If you want to, you could create a GUI to control your buggy.
+If you want to, you could create a GUI (graphical user interface) to control your buggy.
+
+![Buggy GUI forwards button](images/buggy-gui-forwards.png)
 
 1. With your other import statements, add a line of code to import features from the **guizero** library
 
