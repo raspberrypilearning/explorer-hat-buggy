@@ -1,5 +1,5 @@
 - name: Explorer HAT
-  img: explorerhat
+  img: explorer-hat
 - name: 4 x Male-to-female jumper leads
   img: jumper-male-to-female
 - name: 2 x Motors
@@ -8,5 +8,3 @@
   img: foam-wheel
 - name: USB power pack
   img: usb-power-pack
-- name: WiFi dongle (if not using Raspberry Pi 3)
-  img: foam-wheel
