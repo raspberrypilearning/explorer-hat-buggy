@@ -4,7 +4,7 @@ In this resource you will make a very simple buggy, with an optional GUI interfa
 
 ## Choosing a chassis
 
-To make a buggy, you will need to create a chassis so that you can attach the wheels. This is harder than it looks! We chose to use a small chocolate box because it is made of stiff cardboard and about the right size to hold the Raspberry Pi and the USB power stick. You might have a suitable box, or you might wish to create a chassis from other materials such as Lego, or even to 3D print your chassis.
+To make a buggy, you will need to create a chassis so that you can attach the wheels. This is harder than it looks! We chose to use a small chocolate box because it is made of stiff cardboard and about the right size to hold the Raspberry Pi and the USB power stick. You might have a suitable box, or you might wish to create a chassis from other materials such as Lego. You could even 3D print your chassis.
 
 ![Trufflebot](images/trufflebot.png)
 
@@ -29,11 +29,11 @@ To make a buggy, you will need to create a chassis so that you can attach the wh
 
 ## Connect the Raspberry Pi
 
-1. Connect the Explorer HAT to your Raspberry Pi
+1. Connect the Explorer HAT to your Raspberry Pi.
 
     ![Explorer HAT on a Raspberry Pi](images/explorer-hat.png)
 
-1. On the Explorer HAT, locate the two holes labelled "Motor 1" - one is `+` and the other `-`. Take two jumper leads connected to the **same** motor and push them into the holes for motor one. It does not matter which way around the leads go.
+1. On the Explorer HAT, locate the two holes labelled "Motor 1": one is **+** and the other **-**. Take two jumper leads connected to the **same** motor and push them into the holes for Motor one. It does not matter which way round the leads go.
 
     ![Motor one](images/motor-one.png)
 
@@ -44,27 +44,27 @@ To make a buggy, you will need to create a chassis so that you can attach the wh
 
 ## Connecting to your Raspberry Pi remotely
 
-You probably don't want your buggy to be tethered to a keyboard, mouse, monitor or any of the usual peripherals we use to control a Raspberry Pi. Instead, we will use a **headless** setup where we control the Raspberry Pi remotely from another computer. To do this, your Raspberry Pi will need to be connected to a network, so you should either use a Raspberry Pi 3 (with built in WiFi receiver) or you will need to add a WiFi dongle if you are using an earlier version.
+You probably don't want your buggy to be tethered to a keyboard, mouse, monitor or any of the usual peripherals we use to control a Raspberry Pi. Instead, we will use a **headless** setup where we control the Raspberry Pi remotely from another computer. To do this, your Raspberry Pi will need to be connected to a network, so you should use a Raspberry Pi 3 or Raspberry Pi Zero W (with built in WiFi receiver). If you are using an earlier version, you will need to add a WiFi dongle.
 
 1. Set up your Raspberry Pi with the usual screen, keyboard, mouse etc. just as you would normally.
 
-1. Follow the instructions in Option 1 of [this worksheet](https://www.raspberrypi.org/learning/teachers-guide/remote/) to make sure the VNC server is enabled on your Raspberry Pi.
+1. Follow the instructions in Option 1 of [this worksheet](https://www.raspberrypi.org/learning/teachers-guide/remote/) to make sure that the VNC server is enabled on your Raspberry Pi.
 
-1. Open a terminal window
+1. Open a terminal window:
 
     ![Terminal](images/terminal.png)
 
-1. Type in the following command, then press Enter
+1. Type in the following command, then press Enter.
 
     ```bash
     hostname -I
     ```
 
-    This command lets you find out the IP address of your Raspberry Pi so that you can connect to it remotely.
+    This command lets you find the IP address of your Raspberry Pi so that you can connect to it remotely.
 
     ![Connect USB power](images/hostname.png)
 
-    The IP address is the first part, it looks like four numbers separated by dots. The IP address of our Raspberry Pi in this example was `192.168.0.17`. Make a note of the IP address as you will need it in a minute.
+    The IP address is the first part. It looks like four numbers separated by dots. The IP address of our Raspberry Pi in this example was `192.168.0.17`. Make a note of the IP address as you will need it in a minute.
 
 1. Shut down your Raspberry Pi. Remove the peripherals, then attach the USB power pack and put the Raspberry Pi into the chassis.
 
@@ -77,18 +77,18 @@ You probably don't want your buggy to be tethered to a keyboard, mouse, monitor 
 
 1. Once you are connected to the Raspberry Pi via the VNC, you should see the usual Raspberry Pi desktop in a window on your computer.
 
-1. Open up Python 3 from the Programming menu
+1. Open up **Python 3** from the **Programming** menu:
 
     ![Open Python 3](images/python3-app-menu.png)
 
-1. Begin your code by importing the Explorer HAT library and the sleep function from the time library
+1. Begin your code by importing the Explorer HAT library and the sleep function from the time library:
 
     ```python
     import explorerhat
     from time import sleep
     ```
 
-1. Underneath that, add some test code to make the buggy move forwards for two seconds
+1. Underneath that, add some test code to make the buggy move forwards for two seconds:
 
     ```python
     explorerhat.motor.one.forward(100)
@@ -100,7 +100,7 @@ You probably don't want your buggy to be tethered to a keyboard, mouse, monitor 
     explorerhat.motor.two.stop()
     ```
 
-1. Make sure your buggy is in a good place to be able to move, then save your code and press F5 to run it. Your buggy should move forwards a short distance.
+1. Make sure your buggy is in a good place to be able to move, then save your code and press F5 to run it. Your buggy should move forwards for a short distance.
 
 1. Can you figure out how to make your robot do the following:
 
@@ -112,17 +112,17 @@ You probably don't want your buggy to be tethered to a keyboard, mouse, monitor 
 
 ## Adding a GUI
 
-If you want to, you could create a GUI (graphical user interface) to control your buggy.
+If you want to, you could create a GUI (Graphical User Interface) to control your buggy.
 
 ![Buggy GUI forwards button](images/buggy-gui-forwards.png)
 
-1. With your other import statements, add a line of code to import features from the **guizero** library
+1. With your other import statements, add a line of code to import features from the **guizero** library:
 
     ```python
     from guizero import App, PushButton
     ```
 
-1. Underneath your import statements, define a function called `forwards()`
+1. Underneath your import statements, define a function called `forwards()`:
 
     ```python
     def forwards():
@@ -147,20 +147,21 @@ If you want to, you could create a GUI (graphical user interface) to control you
     app = App("Buggy controller")
     ```
 
-1. Now add a button to your GUI
+1. Now add a button to your GUI:
 
     ```python
     drive = PushButton(app, forwards, text="Forwards")
     ```
 
     Let's look at the code in more detail:
-    - `drive =` - this is the variable name, so we can refer to our button
+    - `drive =` - this is the variable name, so we can refer to the button
     - `PushButton` - tells Python to create a button using the PushButton class from guizero
     - `app` - adds this button to the app we just created
     - `forwards` - calls the function called forwards when the button is pressed
     - `text="Forwards"` - this text will be displayed on the button
+    
 
-1. Finally, add the following line at the bottom of your program to display and update the GUI
+1. Finally, add the following line at the bottom of your program to display and update the GUI:
 
     ```python
     app.display()
@@ -180,4 +181,4 @@ If you want to, you could create a GUI (graphical user interface) to control you
 
 1. Could you add pictures (e.g. arrows) to the buttons to show what they do, instead of words? Use the [documentation](https://lawsie.github.io/guizero/pushbutton/) to help you.
 
-1. Could you lay out the buttons in a better way? There is the option for a [grid layout in guizero](https://lawsie.github.io/guizero/box/) that you could use
+1. Could you lay out the buttons in a better way? There is the option for a [grid layout in guizero](https://lawsie.github.io/guizero/box/) that you could use.
