@@ -44,7 +44,7 @@ To make a buggy, you will need to create a chassis so that you can attach the wh
 
 ## Connecting to your Raspberry Pi remotely
 
-You probably don't want your buggy to be tethered to a keyboard, mouse, monitor or any of the usual peripherals we use to control a Raspberry Pi. Instead, we will use a **headless** setup where we control the Raspberry Pi remotely from another computer. To do this, your Raspberry Pi will need to be connected to a network, so you should use a Raspberry Pi 3 or Raspberry Pi Zero W (with built in WiFi receiver). If you are using an earlier version, you will need to add a WiFi dongle.
+You probably don't want your buggy to be tethered to a keyboard, mouse, monitor or any of the usual peripherals we use to control a Raspberry Pi. Instead, we will use a **headless** setup where we control the Raspberry Pi remotely from another computer. To do this, your Raspberry Pi will need to be connected to a network, so you should use a Raspberry Pi 3 (with built in WiFi receiver). If you are using an earlier version, you will need to add a WiFi dongle.
 
 1. Set up your Raspberry Pi with the usual screen, keyboard, mouse etc. just as you would normally.
 
