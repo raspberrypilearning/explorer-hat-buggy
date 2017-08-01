@@ -26,6 +26,7 @@ You probably don't want your buggy to be tethered to a keyboard, mouse, monitor 
 
     ![Connect USB power](images/connect-usb-power.png)
 
-- Follow [these instructions](https://projects.raspberrypi.org/en/projects/teachers-guide/vnc-windows/) to download the VNC viewer software onto the computer you will use to connect to the Raspberry Pi. Connect to the Raspberry Pi via the VNC, using the IP address you just wrote down.
+- You can access your Raspberry Pi buggy, using VNC by following the instructions below.
 
+[[[rpi-vnc-access]]]
 
