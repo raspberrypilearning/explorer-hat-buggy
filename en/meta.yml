@@ -3,7 +3,7 @@ title: Explorer HAT buggy
 hero_image: images/banner.png
 description: Make a very simple buggy using a Raspberry Pi and an Explorer HAT
 original_url: https://raspberrypi.org/learning/explorer-hat-buggy
-theme: red
+theme: violet
 duration: 2
 listed: true
 ingredient: false
