@@ -1,15 +1,31 @@
-## Connect the Raspberry Pi
+## Connecting to your Raspberry Pi remotely
 
-- Connect the Explorer HAT to your Raspberry Pi.
+You probably don't want your buggy to be tethered to a keyboard, mouse, monitor or any of the usual peripherals we use to control a Raspberry Pi. Instead, we will use a **headless** setup where we control the Raspberry Pi remotely from another computer. To do this, your Raspberry Pi will need to be connected to a network, so you should use a Raspberry Pi 3 (with built in wireless receiver). If you are using an earlier version, you will need to add a WiFi dongle.
 
-    ![Explorer HAT on a Raspberry Pi](images/explorer-hat.png)
+- Set up your Raspberry Pi with the usual screen, keyboard, mouse etc. just as you would normally.
 
-- On the Explorer HAT, locate the two holes labelled "Motor 1": one is **+** and the other **-**. Take two jumper leads connected to the **same** motor and push them into the holes for Motor one. It does not matter which way round the leads go.
+- Follow the instructions in Option 1 of [this worksheet](https://www.raspberrypi.org/learning/teachers-guide/remote/){:target="_blank"} to make sure that the VNC server is enabled on your Raspberry Pi.
 
-    ![Motor one](images/motor-one.png)
+- Open a terminal window:
 
-- Repeat this step, pushing the two leads from the other motor into the holes on the Explorer HAT labelled "Motor 2".
+    ![Terminal](images/terminal.png)
 
-    ![Both motors are now connected](images/both-motors-connected.png)
+- Type in the following command, then press Enter.
 
+    ```bash
+    hostname -I
+    ```
 
+    This command lets you find the IP address of your Raspberry Pi so that you can connect to it remotely.
+
+    ![Connect USB power](images/hostname.png)
+
+    The IP address is the first part. It looks like four numbers separated by dots. The IP address of our Raspberry Pi in this example was `192.168.0.17`. Make a note of the IP address as you will need it in a minute.
+
+- Shut down your Raspberry Pi. Remove the peripherals, then attach the USB power pack and put the Raspberry Pi into the chassis.
+
+    ![Connect USB power](images/connect-usb-power.png)
+
+- You can access your Raspberry Pi buggy, using VNC by following the instructions below.
+
+[[[rpi-vnc-access]]]
