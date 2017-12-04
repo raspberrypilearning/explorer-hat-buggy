@@ -1,32 +1,37 @@
-## Connecting to your Raspberry Pi remotely
+## Programming the robot
 
-You probably don't want your buggy to be tethered to a keyboard, mouse, monitor or any of the usual peripherals we use to control a Raspberry Pi. Instead, we will use a **headless** setup where we control the Raspberry Pi remotely from another computer. To do this, your Raspberry Pi will need to be connected to a network, so you should use a Raspberry Pi 3 (with built in wireless receiver). If you are using an earlier version, you will need to add a WiFi dongle.
+- Once you are connected to the Raspberry Pi via the VNC, you should see the usual Raspberry Pi desktop in a window on your computer.
 
-- Set up your Raspberry Pi with the usual screen, keyboard, mouse etc. just as you would normally.
+- Open up **Python 3** from the **Programming** menu:
 
-- Follow the instructions in Option 1 of [this worksheet](https://projects.raspberrypi.org/en/projects/teachers-guide/remote/) to make sure that the VNC server is enabled on your Raspberry Pi.
+    ![Open Python 3](images/python3-app-menu.png)
 
-- Open a terminal window:
+- Begin your code by importing the Explorer HAT library and the sleep function from the time library:
 
-    ![Terminal](images/terminal.png)
-
-- Type in the following command, then press Enter.
-
-    ```bash
-    hostname -I
+    ```python
+    import explorerhat
+    from time import sleep
     ```
 
-    This command lets you find the IP address of your Raspberry Pi so that you can connect to it remotely.
+- Underneath that, add some test code to make the buggy move forwards for two seconds:
 
-    ![Connect USB power](images/hostname.png)
+    ```python
+    explorerhat.motor.one.forward(100)
+    explorerhat.motor.two.forward(100)
 
-    The IP address is the first part. It looks like four numbers separated by dots. The IP address of our Raspberry Pi in this example was `192.168.0.17`. Make a note of the IP address as you will need it in a minute.
+    sleep(2)
 
-- Shut down your Raspberry Pi. Remove the peripherals, then attach the USB power pack and put the Raspberry Pi into the chassis.
+    explorerhat.motor.one.stop()
+    explorerhat.motor.two.stop()
+    ```
 
-    ![Connect USB power](images/connect-usb-power.png)
+- Make sure your buggy is in a good place to be able to move, then save your code and press F5 to run it. Your buggy should move forwards for a short distance.
 
-- You can access your Raspberry Pi buggy, using VNC by following the instructions below.
+- Can you figure out how to make your robot do the following:
 
-[[[rpi-vnc-access]]]
+    - Move backwards
+    - Move for a longer length of time
+    - Move more slowly
+    - Turn left and right?
+
 
