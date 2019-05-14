@@ -2,9 +2,9 @@
 
 - Once you are connected to the Raspberry Pi via the VNC, you should see the usual Raspberry Pi desktop in a window on your computer.
 
-- Open up **Python 3** from the **Programming** menu:
+- Open up **Thonny** from the **Programming** menu:
 
-    ![Open Python 3](images/python3-app-menu.png)
+    ![Open Python 3](images/thonny.png)
 
 - Begin your code by importing the Explorer HAT library and the sleep function from the time library:
 
