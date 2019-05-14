@@ -4,7 +4,7 @@
 
 - Open up **Thonny** from the **Programming** menu:
 
-    ![Open Python 3](images/thonny.png)
+    ![Open Thonny](images/thonny.png)
 
 - Begin your code by importing the Explorer HAT library and the sleep function from the time library:
 
