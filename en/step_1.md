@@ -1,3 +1,7 @@
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+An <span style="color: #0faeb0">The explorerhat python library</span> does not currently work with the latest version of Raspberry Pi OS (Bullseye), but you can download and install the Legacy OS using <a href="https://www.raspberrypi.com/software/> Raspberry Pi Imager</a> for all your Explorer HAT projects.
+</p>
+
 ## What you will make
 In this resource you will make a very simple buggy, with an optional GUI interface to control it remotely from another computer
 
