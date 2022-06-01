@@ -1,3 +1,4 @@
+---
 title: Explorer HAT buggy
 hero_image: images/banner.png
 description: Make a very simple buggy using a Raspberry Pi and an Explorer HAT
@@ -15,13 +16,17 @@ hardware: electronic-components
 software: python
 version: 3
 last_tested: 2017-01-01
-steps: 
+steps:
 - title: Introduction
 - title: What you will need
 - title: Choosing a chassis
 - title: Add wheels
+  completion:
+  - engaged
 - title: Connect the Raspberry Pi
 - title: Connecting to your Raspberry Pi remotely
 - title: Programming the robot
 - title: Adding a GUI
+  completion:
+  - internal
 - title: What next?
