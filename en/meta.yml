@@ -19,12 +19,14 @@ last_tested: 2017-01-01
 steps:
 - title: Introduction
 - title: What you will need
-  completion: engaged
 - title: Choosing a chassis
 - title: Add wheels
+  completion:
+  - engaged
 - title: Connect the Raspberry Pi
 - title: Connecting to your Raspberry Pi remotely
 - title: Programming the robot
-  completion: internal
 - title: Adding a GUI
+  completion:
+  - internal
 - title: What next?
