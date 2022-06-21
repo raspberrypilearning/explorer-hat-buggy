@@ -4,7 +4,9 @@ You probably don't want your buggy to be tethered to a keyboard, mouse, monitor 
 
 - Set up your Raspberry Pi with the usual screen, keyboard, mouse etc. just as you would normally.
 
-- Follow the instructions in Option 1 of [this worksheet](https://www.raspberrypi.org/learning/teachers-guide/remote/){:target="_blank"} to make sure that the VNC server is enabled on your Raspberry Pi.
+- Make sure that the VNC server is enabled on your Raspberry Pi.
+
+[[[rpi-vnc-access]]]
 
 - Open a terminal window:
 
